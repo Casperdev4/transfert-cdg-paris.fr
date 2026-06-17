@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-  <!-- ACCUEIL -->
   <url>
     <loc>https://transfert-cdg-paris.fr/</loc>
     <lastmod>2026-06-17</lastmod>
@@ -29,8 +27,6 @@
       <image:caption>Van Mercedes Classe V : navette Montparnasse CDG, navette aéroport Charles de Gaulle gare Montparnasse et navettes CDG Paris.</image:caption>
     </image:image>
   </url>
-
-  <!-- MERCEDES CLASSE E -->
   <url>
     <loc>https://transfert-cdg-paris.fr/chauffeur-prive-classe-e.html</loc>
     <lastmod>2026-06-17</lastmod>
@@ -42,8 +38,6 @@
       <image:caption>Berline Mercedes Classe E avec chauffeur : chauffeur privé pour particulier, réserver VTC aéroport et navette Paris Charles de Gaulle.</image:caption>
     </image:image>
   </url>
-
-  <!-- MERCEDES CLASSE S -->
   <url>
     <loc>https://transfert-cdg-paris.fr/chauffeur-prive-classe-s.html</loc>
     <lastmod>2026-06-17</lastmod>
@@ -55,8 +49,6 @@
       <image:caption>Chauffeur Mercedes Classe S : chauffeur VTC privé, transport privé VIP et chauffeur privé longue distance au départ de Paris.</image:caption>
     </image:image>
   </url>
-
-  <!-- MERCEDES CLASSE V -->
   <url>
     <loc>https://transfert-cdg-paris.fr/chauffeur-prive-classe-v.html</loc>
     <lastmod>2026-06-17</lastmod>
@@ -68,5 +60,4 @@
       <image:caption>Van Mercedes Classe V : navette Montparnasse CDG, navette aéroport Charles de Gaulle gare Montparnasse et navettes CDG Paris avec chauffeur.</image:caption>
     </image:image>
   </url>
-
 </urlset>
