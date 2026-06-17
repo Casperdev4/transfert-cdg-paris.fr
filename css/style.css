@@ -136,9 +136,9 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   position: absolute; inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(11,11,13,0.94) 0%, rgba(11,11,13,0.72) 45%, rgba(11,11,13,0.45) 100%),
-    linear-gradient(180deg, rgba(11,11,13,0.35) 0%, transparent 35%, rgba(11,11,13,0.95) 100%),
-    url("../hero.webp") center center / cover no-repeat;
+    linear-gradient(90deg, rgba(11,11,13,0.88) 0%, rgba(11,11,13,0.6) 45%, rgba(11,11,13,0.25) 100%),
+    linear-gradient(180deg, rgba(11,11,13,0.3) 0%, transparent 40%, rgba(11,11,13,0.85) 100%),
+    url("../chauffeur_prive_paris.webp") center 40% / cover no-repeat;
 }
 .hero__overlay {
   position: absolute; right: -10%; top: 50%; transform: translateY(-50%);
@@ -584,7 +584,7 @@ body { background: #ffffff; color: #222222; }
 .vehicle__desc { color: #555555; }
 .vehicle__specs li { color: #555555; }
 .vehicle__specs span { color: #111111; }
-.perk__num { color: #111111; opacity: .14; }
+.perk__num { color: #111111; opacity: .5; }
 .perk h3 { color: #111111; }
 .perk p { color: #555555; }
 .pricing__table { border-color: #e6e6ea; }
@@ -691,3 +691,10 @@ body { background: #ffffff; color: #222222; }
 .v-stat { border-right-color: #d8d8de; }
 .vehicle__media { border-bottom-color: #d8d8de; }
 .hero__subtitle strong, .v-hero__lead strong, .footer__about strong { color: #ffffff; }
+
+.booking__form { background: #f1f1f4; border-color: #cfcfd6; }
+.field label { color: #2e2e2e; }
+.field input, .field select, .field textarea { background: #ffffff; border-color: #bfbfc8; color: #111111; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #111111; box-shadow: 0 0 0 2px rgba(17,17,17,0.08); }
+.field input::placeholder, .field textarea::placeholder { color: #88888f; }
+.booking__contact span { color: #111111; }
