@@ -47,7 +47,7 @@
     });
   }
   var revealEls = document.querySelectorAll(
-    '.card, .vehicle, .perk, .pricing__row, .faq__item, .section__head'
+    '.card, .vehicle, .perk, .pricing__row, .faq__item, .section__head, .info-card, .dest-col'
   );
   revealEls.forEach(function (el) { el.classList.add('reveal'); });
   if ('IntersectionObserver' in window) {
