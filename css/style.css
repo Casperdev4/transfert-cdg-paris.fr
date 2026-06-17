@@ -182,7 +182,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   background:
     linear-gradient(90deg, rgba(11,11,13,0.94) 0%, rgba(11,11,13,0.72) 45%, rgba(11,11,13,0.45) 100%),
     linear-gradient(180deg, rgba(11,11,13,0.35) 0%, transparent 35%, rgba(11,11,13,0.95) 100%),
-    url("../hero.jpeg") center center / cover no-repeat;
+    url("../hero.webp") center center / cover no-repeat;
 }
 .hero__overlay {
   position: absolute; right: -10%; top: 50%; transform: translateY(-50%);
@@ -308,20 +308,8 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   display: grid; grid-template-columns: 1.05fr 0.95fr;
   gap: 50px; align-items: center; width: 100%;
 }
-.v-hero__showcase {
-  background: radial-gradient(ellipse at 50% 45%, #ffffff 0%, #e6e7eb 55%, #cdced4 100%);
-  border: 1px solid var(--line); border-radius: 10px;
-  padding: 28px; display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-}
-.v-hero__showcase img {
-  width: 100%; max-height: 300px; object-fit: contain;
-  filter: drop-shadow(0 18px 24px rgba(0,0,0,0.25));
-}
 @media (max-width: 900px) {
   .v-hero__inner { grid-template-columns: 1fr; gap: 32px; }
-  .v-hero__showcase { order: 2; padding: 20px; }
-  .v-hero__showcase img { max-height: 220px; }
   .hero-form { order: 2; }
 }
 
@@ -382,10 +370,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
 .v-hero--e::before { background: linear-gradient(135deg, #2a2c33, #0f1013); }
 .v-hero--s::before { background: linear-gradient(135deg, #3a3526, #0f1013); }
 .v-hero--v::before { background: linear-gradient(135deg, #26303a, #0f1013); }
-.v-hero__emoji {
-  position: absolute; right: 4%; top: 46%; transform: translateY(-50%);
-  font-size: 14rem; opacity: 0.14; z-index: 1; line-height: 1;
-}
 .v-hero__content { position: relative; z-index: 2; max-width: 720px; }
 .v-hero__crumb { font-size: 0.84rem; letter-spacing: 1px; color: var(--grey); margin-bottom: 22px; }
 .v-hero__crumb a { color: var(--gold); }
@@ -473,7 +457,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
 }
 @media (max-width: 768px) {
   .vehicle__actions { grid-template-columns: 1fr; }
-  .v-hero__emoji { font-size: 8rem; opacity: 0.1; }
   .v-equip__grid { grid-template-columns: 1fr; }
   .v-uses__list { grid-template-columns: 1fr; }
 }
@@ -641,12 +624,13 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   .pricing__table { border: none; }
   .pricing__row--head { display: none; }
   .pricing__row {
-    grid-template-columns: 1fr; gap: 8px; border: 1px solid var(--line);
+    grid-template-columns: 1fr; gap: 8px; background: #ffffff;
+    border: 1px solid #d8d8de; box-shadow: 0 4px 16px rgba(0,0,0,.05);
     border-radius: var(--radius); margin-bottom: 14px; padding: 18px;
   }
   .pricing__row span:not(:first-child) { display: flex; justify-content: space-between; }
   .pricing__row span:not(:first-child)::before {
-    content: attr(data-label); color: var(--grey); font-size: 0.82rem;
+    content: attr(data-label); color: #6a6a6a; font-size: 0.82rem;
   }
   .pricing__row span:first-child { font-size: 1.1rem; padding-bottom: 8px; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
 
@@ -672,3 +656,200 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   .cta-band__actions { width: 100%; flex-direction: column; }
   .cta-band__actions .btn { width: 100%; }
 }
+
+/* =================================================================
+   THÈME NOIR & BLANC
+   Header / Hero / CTA / Footer restent noirs (logo blanc lisible)
+   Sections de contenu en blanc / gris clair, accents or -> noir & blanc
+   ================================================================= */
+
+:root { --line: rgba(140, 140, 150, 0.25); }
+
+/* Base claire */
+body { background: #ffffff; color: #222222; }
+
+/* ---- Fonds clairs alternés ---- */
+.services { background: #ffffff; }
+.fleet    { background: #f4f4f6; }
+.perks    { background: #ffffff; }
+.pricing  { background: #f4f4f6; }
+.booking  { background: #ffffff; }
+.faq      { background: #f4f4f6; }
+.v-stats  { background: #f4f4f6; border-bottom: 1px solid #e6e6ea; }
+.v-equip  { background: #f4f4f6; }
+.v-price  { background: #f4f4f6; }
+
+/* ---- Titres & intros (sections claires) ---- */
+.section__title   { color: #111111; }
+.section__eyebrow { color: #111111; }
+.section__intro   { color: #555555; }
+
+/* ---- Cartes services ---- */
+.card { background: #ffffff; border: 1px solid #e6e6ea; }
+.card:hover { background: #ffffff; border-color: #111111; box-shadow: 0 16px 34px rgba(0,0,0,.08); }
+.card__icon { color: #111111; border-color: #e0e0e4; }
+.card__title { color: #111111; }
+.card p { color: #555555; }
+
+/* ---- Flotte ---- */
+.vehicle { background: #ffffff; border: 1px solid #e6e6ea; }
+.vehicle:hover { box-shadow: 0 22px 44px rgba(0,0,0,.14); }
+.vehicle--featured { border-color: #111111; }
+.vehicle__media { border-bottom-color: #e6e6ea; }
+.vehicle__tag { color: #8a8a90; }
+.vehicle__tag--gold { color: #111111; }
+.vehicle__name a { color: #111111; }
+.vehicle__name a:hover { color: #555555; }
+.vehicle__desc { color: #555555; }
+.vehicle__specs li { color: #555555; }
+.vehicle__specs span { color: #111111; }
+
+/* ---- Avantages ---- */
+.perk__num { color: #111111; opacity: .14; }
+.perk h3 { color: #111111; }
+.perk p { color: #555555; }
+
+/* ---- Tarifs ---- */
+.pricing__table { border-color: #e6e6ea; }
+.pricing__row { border-bottom-color: #e6e6ea; }
+.pricing__row--head { background: #111111; color: #ffffff; }
+.pricing__row span:first-child { color: #111111; }
+.pricing__row span:not(:first-child) { color: #444444; }
+.pricing__row:not(.pricing__row--head):hover { background: #ececef; }
+.pricing__note { color: #888888; }
+
+/* ---- Réservation ---- */
+.booking__intro > p { color: #555555; }
+.booking__contact li { color: #333333; }
+.booking__contact span { color: #111111; }
+.booking__contact a:hover { color: #000000; }
+.booking__form { background: #ffffff; border: 1px solid #e6e6ea; }
+.field label { color: #555555; }
+.field input, .field select, .field textarea { background: #ffffff; border: 1px solid #cfcfd4; color: #111111; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #111111; }
+.field input::placeholder, .field textarea::placeholder { color: #9a9aa0; }
+.field select option { background: #ffffff; }
+.booking__feedback.success { color: #111111; }
+
+/* ---- FAQ ---- */
+.faq__item { background: #ffffff; border: 1px solid #e6e6ea; }
+.faq__item summary { color: #111111; }
+.faq__item summary::after { color: #111111; }
+.faq__item p { color: #555555; }
+
+/* ---- Pages véhicule : stats ---- */
+.v-stat { border-right-color: #e6e6ea; }
+.v-stat__icon { color: #111111; }
+.v-stat__value { color: #111111; }
+.v-stat__label { color: #888888; }
+
+/* ---- Pages véhicule : présentation ---- */
+.v-intro__text p { color: #555555; }
+
+/* ---- Pages véhicule : équipements ---- */
+.v-equip__item { background: #ffffff; border: 1px solid #e6e6ea; }
+.v-equip__item span { color: #111111; }
+.v-equip__item h3 { color: #111111; }
+.v-equip__item p { color: #666666; }
+
+/* ---- Pages véhicule : usages ---- */
+.v-uses__list li { background: #ffffff; border: 1px solid #e6e6ea; color: #555555; }
+.v-uses__list li::before { color: #111111; }
+
+/* ---- Pages véhicule : tarifs ---- */
+.v-price__card { background: #ffffff; border: 1px solid #e6e6ea; }
+.v-price__card:hover { border-color: #111111; }
+.v-price__route { color: #111111; }
+.v-price__amount { color: #111111; }
+.v-price__amount small { color: #888888; }
+
+/* ---- Boutons (contexte clair = défaut) ---- */
+.btn--gold { background: #111111; color: #ffffff; }
+.btn--gold:hover { background: #000000; box-shadow: 0 12px 30px rgba(0,0,0,.2); }
+.btn--outline { border-color: #111111; color: #111111; }
+.btn--outline:hover { background: #111111; color: #ffffff; }
+
+/* =====  SECTIONS SOMBRES CONSERVÉES (or -> blanc)  ===== */
+.hero__overlay { background: radial-gradient(circle, rgba(255,255,255,.06), transparent 70%); }
+.hero__eyebrow { color: #d8d8d8; }
+.hero__title span { background: none; -webkit-text-fill-color: #ffffff; color: #ffffff; }
+.hero__badges strong { color: #ffffff; }
+.hero__scroll { color: #ffffff; }
+
+.nav__link:hover { color: #ffffff; }
+.nav__link::after { background: #ffffff; }
+.header__cta { color: #ffffff; }
+.header__cta:hover { border-color: #ffffff; color: #ffffff; }
+.header__cta-icon { color: #ffffff; }
+
+.v-hero__tag { color: #d8d8d8; border-color: rgba(255,255,255,.25); }
+.v-hero__title span { background: none; -webkit-text-fill-color: #ffffff; color: #ffffff; }
+.v-hero__crumb a { color: #ffffff; }
+
+.cta-band {
+  background:
+    linear-gradient(rgba(11,11,13,.9), rgba(11,11,13,.95)),
+    radial-gradient(ellipse at center, rgba(255,255,255,.06), transparent 70%),
+    #0b0b0d;
+}
+
+.footer__col h4 { color: #ffffff; }
+.footer__contact span { color: #ffffff; }
+.footer__col ul li a:hover { color: #ffffff; }
+.footer__bottom a:hover { color: #ffffff; }
+
+/* Boutons inversés (blanc) dans les zones sombres */
+.hero .btn--gold, .cta-band .btn--gold, .v-hero .btn--gold {
+  background: #ffffff; color: #111111;
+}
+.hero .btn--gold:hover, .cta-band .btn--gold:hover, .v-hero .btn--gold:hover {
+  background: #e6e6e6; color: #111111; box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+.hero .btn--ghost, .cta-band .btn--ghost, .v-hero .btn--ghost {
+  border-color: rgba(255,255,255,.45); color: #ffffff;
+}
+.hero .btn--ghost:hover, .cta-band .btn--ghost:hover, .v-hero .btn--ghost:hover {
+  border-color: #ffffff; color: #ffffff;
+}
+.v-hero .btn--outline { border-color: rgba(255,255,255,.45); color: #ffffff; }
+.v-hero .btn--outline:hover { background: #ffffff; color: #111111; }
+
+/* Formulaire multi-étapes (hero sombre) : accents or -> blanc */
+.form-step__label { color: #d8d8d8; }
+.step-dot.active { background: #ffffff; }
+.hf-feedback.success { color: #ffffff; }
+.hf-field input:focus, .hf-field select:focus { border-color: #ffffff; }
+
+/* =================================================================
+   AJUSTEMENTS DE CONTRASTE
+   ================================================================= */
+
+/* Petits textes gris : assombris pour une meilleure lisibilité */
+.vehicle__tag { color: #6c6c74; }
+.v-stat__label, .v-price__amount small, .pricing__note { color: #6a6a6a; }
+.section__intro { color: #4f4f4f; }
+.card p, .vehicle__desc, .perk p, .faq__item p,
+.v-intro__text p, .v-uses__list li, .v-equip__item p { color: #4a4a4a; }
+.booking__intro > p, .booking__contact li { color: #3f3f3f; }
+.field label { color: #444444; }
+.pricing__row span:not(:first-child) { color: #333333; }
+
+/* Cartes mieux définies sur fonds clairs (bordure + ombre douce) */
+.card, .vehicle, .faq__item, .booking__form,
+.v-equip__item, .v-uses__list li, .v-price__card {
+  border-color: #d8d8de;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.pricing__table { border-color: #d8d8de; }
+.pricing__row { border-bottom-color: #d8d8de; }
+/* En-tête noire : forcer le texte des cellules en blanc */
+.pricing__row--head span:first-child,
+.pricing__row--head span:not(:first-child) { color: #ffffff; }
+
+/* Séparateurs un peu plus visibles */
+.v-stats { border-bottom-color: #d8d8de; }
+.v-stat { border-right-color: #d8d8de; }
+.vehicle__media { border-bottom-color: #d8d8de; }
+
+/* Emphase (gras) lisible sur fonds sombres */
+.hero__subtitle strong, .v-hero__lead strong, .footer__about strong { color: #ffffff; }
