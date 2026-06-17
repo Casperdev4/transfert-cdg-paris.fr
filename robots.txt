@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://transfert-cdg-paris.fr/sitemap.xml
