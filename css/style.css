@@ -121,19 +121,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
 .logo:hover .logo__img { opacity: 0.85; }
 .header.scrolled .logo__img { height: 44px; }
 .logo--footer .logo__img { height: 58px; margin-bottom: 20px; }
-/* Anciens éléments texte (conservés au cas où) */
-.logo__mark {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 1px;
-  color: var(--black);
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  padding: 6px 11px;
-  border-radius: var(--radius);
-}
-.logo__text { font-family: var(--font-serif); font-size: 1.35rem; color: var(--white); letter-spacing: 1px; }
-.logo__text em { color: var(--gold); font-style: italic; }
 
 .nav__list { display: flex; gap: 34px; }
 .nav__link {
@@ -651,7 +638,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; line-height: 
   .container { padding: 0 18px; }
   .hero__actions { flex-direction: column; }
   .hero__actions .btn { width: 100%; }
-  .logo__text { font-size: 1.15rem; }
   .hero__badges { gap: 22px; }
   .cta-band__actions { width: 100%; flex-direction: column; }
   .cta-band__actions .btn { width: 100%; }
